@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../../resources/views/**/*.blade.php';
+
+@theme {
+    --font-bangers: 'Bangers', cursive, sans-serif;
+    --font-outfit: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    
+    --color-golshi-red: #DC2626;
+    --color-golshi-red-dark: #991B1B;
+    --color-golshi-gold: #D97706;
+    --color-golshi-gold-light: #F59E0B;
+    --color-golshi-bg: #F8FAFC;
+}
+
+@layer utilities {
+    .font-bangers {
+        font-family: 'Bangers', cursive, sans-serif;
+        letter-spacing: 0.04em;
+    }
+    .font-outfit {
+        font-family: 'Outfit', sans-serif;
+    }
+}
+
+/* Simple & Clean Utility Classes for Red-White-Gold Theme */
+.text-gold {
+    color: #D97706;
+}
+.text-red-primary {
+    color: #DC2626;
+}
+
+.bg-red-primary {
+    background-color: #DC2626;
+}
+
+.border-gold {
+    border-color: #F59E0B;
+}
+
+.border-red-subtle {
+    border-color: rgba(220, 38, 38, 0.2);
+}
+
+/* Subtle Shimmer & Clean Shadow */
+.clean-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 20px -2px rgba(220, 38, 38, 0.05), 0 2px 6px -1px rgba(217, 119, 6, 0.05);
+    transition: all 0.25s ease-in-out;
+}
+
+.clean-card:hover {
+    border-color: #F59E0B;
+    box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.1), 0 8px 10px -6px rgba(217, 119, 6, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-red {
+    background-color: #DC2626;
+    color: #FFFFFF;
+    transition: all 0.2s ease;
+}
+.btn-red:hover {
+    background-color: #B91C1C;
+    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);
+}
+
+.btn-gold-outline {
+    background-color: #FFFFFF;
+    color: #92400E;
+    border: 1.5px solid #F59E0B;
+    transition: all 0.2s ease;
+}
+.btn-gold-outline:hover {
+    background-color: #FEF3C7;
+    color: #78350F;
+}
+
+/* Clean Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #DC2626;
+}
